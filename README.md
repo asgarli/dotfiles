@@ -13,7 +13,7 @@ Update system and install system tools
 ```sh
 sudo apt-get update
 sudo apt-get -y upgrade
-sudo apt-get -y install git mc htop vim python3
+sudo apt-get -y install git mc htop vim python3 python-pygments
 ```
 
 ### zsh setup
