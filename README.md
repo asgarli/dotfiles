@@ -7,6 +7,15 @@ curl -O https://raw.githubusercontent.com/asgarli/dotfiles/master/.vimrc
 curl -O https://raw.githubusercontent.com/asgarli/dotfiles/master/.screenrc
 ```
 
+### System setup 
+
+Update system and install system tools
+```sh
+sudo apt-get update
+sudo apt-get -y upgrade
+sudo apt-get -y install git mc htop vim python3
+```
+
 ### zsh setup
 
  - Install [ohmyzsh.sh](https://ohmyz.sh/).
