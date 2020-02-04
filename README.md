@@ -1,10 +1,10 @@
-# My dotfiles
+# Dotfiles
 
 ### Setup
 
 ```sh
 curl -O https://raw.githubusercontent.com/asgarli/dotfiles/master/.vimrc
-curl -O https://raw.githubusercontent.com/asgarli/dotfiles/master/.screenrc
+curl -O https://raw.githubusercontent.com/asgarli/dotfiles/master/.tmux.conf
 ```
 
 ### System setup 
@@ -13,7 +13,7 @@ Update system and install system tools
 ```sh
 sudo apt-get update
 sudo apt-get -y upgrade
-sudo apt-get -y install git mc htop vim python3 python-pygments
+sudo apt-get -y install git mc htop vim tmux
 ```
 
 ### zsh setup
@@ -30,7 +30,6 @@ sudo apt-get -y install git mc htop vim python3 python-pygments
  - Add following plugins:
      ```
      plugins=(
-      alias-tips
       common-aliases
       colorize
       extract
@@ -40,7 +39,7 @@ sudo apt-get -y install git mc htop vim python3 python-pygments
       github
       ng
       npm
-      screen
+      tmux
       vscode
       yarn
       zsh-autosuggestions
