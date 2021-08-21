@@ -26,23 +26,21 @@ sudo apt-get -y install git mc htop vim tmux
      ```
      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
      ```
+ - Install [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting)
+     ```
+     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+     ```
  - Modify `.zshrc` and set `ZSH_THEME="agnoster"`
  - Add following plugins:
      ```
      plugins=(
       common-aliases
       colorize
-      extract
       fasd
       history
       git
-      github
-      ng
-      npm
-      tmux
-      vscode
-      yarn
       zsh-autosuggestions
+      zsh-syntax-highlighting
     )
     ```
 
