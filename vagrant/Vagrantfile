@@ -1,0 +1,43 @@
+#################################################
+##    Change these                             ##
+#################################################
+VM_NAME = "vm_name"
+USERNAME = "asgarli"
+NAME = "Elchin Asgarli"
+EMAIL = "elchin@example.com" 
+
+VM_RAM_MEGABYTES = 16384
+VM_CPUS = 2
+
+VM_MAC_ADDRESS = "abcdef012345"
+HOST_BRIDGE_NETWORK_NAME = "my_amazing_network"
+
+#################################################
+##    DO NOT CHANGE THESE                      ##
+#################################################
+
+LOCAL_INIT_PATH="./init"
+VM_INIT_PATH="/init-scripts"
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/focal64" 
+    
+    config.vm.provider :virtualbox do |vb|
+        vb.name = VM_NAME
+        vb.memory = VM_RAM_MEGABYTES
+	vb.cpus = VM_CPUS
+    end
+ 
+    config.vm.hostname = VM_NAME
+    config.vm.network "public_network", :bridge => HOST_BRIDGE_NETWORK_NAME, :mac => VM_MAC_ADDRESS
+
+    config.vm.synced_folder LOCAL_INIT_PATH, VM_INIT_PATH
+    config.vm.provision "shell", inline: <<-SHELL 
+	chmod +rx "#{VM_INIT_PATH}/root-provision.sh"
+	source "#{VM_INIT_PATH}/root-provision.sh" #{USERNAME}
+    SHELL
+    config.vm.provision "shell", inline: <<-SHELL
+	chmod +rx "#{VM_INIT_PATH}/user-provision.sh"
+	su -c "#{VM_INIT_PATH}/user-provision.sh" #{USERNAME}
+    SHELL
+end
