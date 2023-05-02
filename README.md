@@ -1,9 +1,11 @@
-# Dotfiles
+# dotfiles
 
 My various system setup files and configurations.
 
-## Contents
+## Dependencies
 
-- `vagrant` for VM setups and vim configuration.
-- (TODO) Hack nerd font for macos
-- (TODO) Solarize Dark theme for macos
+Install the following
+
+- [oh-my-zsh](https://ohmyz.sh/)
+- [oh-my-tmux](https://github.com/gpakosz/.tmux)
+- [AstroNvim](https://github.com/AstroNvim/AstroNvim)
