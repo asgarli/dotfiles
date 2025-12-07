@@ -2,10 +2,11 @@
 
 My various system setup files and configurations.
 
-## Dependencies
+## MacOS
 
-Install the following
+Install with homebrew:
+```bash
+brew install $(cat brew-packages.txt)
+```
 
-- [oh-my-zsh](https://ohmyz.sh/)
-- [oh-my-tmux](https://github.com/gpakosz/.tmux)
-- [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+## Linux

@@ -1,0 +1,18 @@
+[general]
+import = [
+  "~/.config/alacritty/theme_github_dark.toml"
+]
+
+[font]
+size = 15
+[font.normal]
+family = "MesloLGS Nerd Font"
+
+[window]
+opacity = 0.9
+
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+]

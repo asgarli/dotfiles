@@ -1,10 +1,9 @@
 [user]
 	name = Elchin Asgarli
-	email = elchin@asgarli.net
+	email = elchin@codelity.tech
 [alias]
 	st = status
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 	uncommit = reset --soft HEAD^
 [pull]
 	rebase = true
-
