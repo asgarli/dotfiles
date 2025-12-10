@@ -5,7 +5,12 @@ setopt nonomatch           # hide error message if there is no match for the pat
 
 command -v starship &> /dev/null && eval "$(starship init zsh)"
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 [ -f ~/.aliases ] && source ~/.aliases
+
+if [[ $OSTYPE == darwin* ]]; then
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+  source /usr/share/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/share/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
