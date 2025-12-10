@@ -1,5 +1,6 @@
 font-meslo-lg-nerd-font
 alacritty
+ghostty
 starship
 zsh-autosuggestions
 zsh-syntax-highlighting
